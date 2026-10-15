@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#131411"><meta name="description" content="Mortal Sopranos: a digitized 16-bit arcade brawler. Play Tony, Carmela, Artie, or Junior in solo or local co-op."><title>Mortal Sopranos — North Jersey, No Mercy</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="masthead"><a class="brand" href="./" aria-label="Mortal Sopranos home"><span class="brand-mark">MS</span> MORTAL SOPRANOS<span class="edition">ARCADE EDITION</span></a><div class="top-actions"><span class="live"><i></i> FREE PLAY</span><button id="sound" aria-label="Enable sound" aria-pressed="false">SOUND OFF</button><button id="help">HOW TO PLAY <span>↗</span></button><button id="fullscreen" aria-label="Enter fullscreen">⛶</button></div></header>
+<main>
+<div class="section-line"><span><i class="red-dot"></i> NORTH JERSEY. NO MERCY.</span><span id="record">HI-SCORE 000000</span></div>
+<section class="cabinet" aria-label="Mortal Sopranos arcade game">
+<canvas id="game" width="960" height="540" tabindex="0" aria-label="Arcade game. Use WASD to move, F to attack, G to kick, H for special, Space to jump, and R to block."></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+<div id="title-screen" class="title-screen">
+<div class="eyebrow"><span>EST. 1999</span><span>1–2 PLAYERS</span></div>
+<h1>MORTAL<br><strong>SOPRANOS</strong></h1>
+<p class="tagline">Family business. Street rules.</p>
+<p class="intro">Four familiar faces. Three bad neighborhoods.<br>A little less conversation. A lot more gabagool.</p>
+<div class="start-buttons"><button class="primary" id="solo">START SOLO <span>↗</span></button><button class="secondary" id="coop">2 PLAYER CO-OP</button></div>
+<p id="loading" class="small-note">LOADING THE NEIGHBORHOOD…</p>
+</div>
+<div id="game-overlay" class="game-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="overlay-title"><span id="overlay-kicker" class="eyebrow">FAMILY BUSINESS</span><h2 id="overlay-title">PAUSED</h2><p id="overlay-copy"></p><div class="overlay-actions"><button class="primary" id="resume">RESUME</button><button class="secondary" id="return">CHARACTER SELECT</button></div></div>
+<div id="play-toolbar" class="play-toolbar hidden"><button id="pause">Ⅱ PAUSE</button><span>ESC TO PAUSE · M TO MUTE</span></div>
+<div class="cabinet-bottom"><span><i></i> DIGITIZED MAYHEM / 16-BIT ATTITUDE</span><span>NEW JERSEY, USA <b>© FAN ARCADE</b></span></div>
+</section>
+<section id="selection" class="selection">
+<div class="roster-heading"><div><span class="eyebrow">THE FAMILY</span><h2>Choose your trouble.</h2></div><div class="player-tabs" role="group" aria-label="Choose player to customize"><button id="pick1" class="active" aria-pressed="true">P1 <span id="name1">CARMELA</span></button><button id="pick2" aria-pressed="false">P2 <span id="name2">TONY</span></button></div></div>
+<div id="roster" class="roster"></div>
+<div class="selection-foot"><span id="special-description">SPECIAL / “SOME PULP” — a cordless phone with your name on it.</span><span>SELECT A CHARACTER · THEN START ↑</span></div>
+</section>
+<section id="touch-controls" class="touch-controls hidden" aria-label="Touch game controls"><div class="dpad"><button data-key="KeyW" aria-label="Up">↑</button><button data-key="KeyA" aria-label="Left">←</button><button data-key="KeyS" aria-label="Down">↓</button><button data-key="KeyD" aria-label="Right">→</button></div><div class="touch-actions"><button data-key="KeyR">BLOCK</button><button data-key="Space">JUMP</button><button data-key="KeyF">HIT</button><button data-key="KeyG">KICK</button><button data-key="KeyH">SPECIAL</button></div></section>
+<section class="controls-strip"><span class="label">KNOW THE RULES</span><span><kbd>W A S D</kbd> MOVE</span><span><kbd>F</kbd> HIT <kbd>G</kbd> KICK</span><span><kbd>SPACE</kbd> JUMP</span><span><kbd>R</kbd> BLOCK</span><span><kbd>H</kbd> SPECIAL</span><button id="more-controls">P2 / GAMEPAD ↗</button></section>
+<footer><span>AN UNOFFICIAL SOPRANOS FAN GAME</span><span>ORIGINAL CHIPTUNE SCORE <i>✦</i> BUILT FOR COUCH CO-OP</span><span>NO QUARTERS REQUIRED.</span></footer>
+</main>
+<dialog id="help-dialog"><button id="close-help" class="close" aria-label="Close controls">×</button><span class="eyebrow">A FRIENDLY WORD OF ADVICE</span><h2>Handle your business.</h2><p>Clear three blocks in each neighborhood, then take down the boss. Follow the GO arrow when the street is clear. Finish all three neighborhoods to settle the score.</p><div class="control-columns"><div><h3>PLAYER ONE</h3><p><kbd>W A S D</kbd> Move<br><kbd>F</kbd> Punch / weapon<br><kbd>G</kbd> Kick<br><kbd>SPACE</kbd> Jump<br><kbd>R</kbd> Hold to block<br><kbd>H</kbd> Special</p></div><div><h3>PLAYER TWO</h3><p><kbd>ARROWS</kbd> Move<br><kbd>J</kbd> Punch / weapon<br><kbd>K</kbd> Kick<br><kbd>RIGHT SHIFT</kbd> Jump<br><kbd>O</kbd> Hold to block<br><kbd>L</kbd> Special</p></div></div><p><b>Gamepads:</b> left stick / D-pad move · X hit · B kick · A jump · Y special · LB block · Start pause. First pad controls P1, second pad P2.</p><p><b>Stay in their lane.</b> Line up vertically before attacking. Jump kicks hit harder. Chain hits to build a combo and refill your special meter. Block facing the attacker. Pick up sandwiches for health and envelopes for points.</p><p><b>Carmela:</b> vacuum strikes + “Some Pulp” phone throw.<br><b>Tony:</b> heavy punches + a charging shoulder.<br><b>Artie:</b> skillet swings + a flying pan.<br><b>Junior:</b> long-reach cane + a spinning cane sweep.</p><p class="small-note">THREE LIVES EACH · TWO SHARED CONTINUES · ESC PAUSE · M SOUND<br>Original music inspired by blues, lounge, and crime-film grooves; no recordings from the show.</p></dialog>
+<script type="module" src="main.mjs"></script></body></html>
